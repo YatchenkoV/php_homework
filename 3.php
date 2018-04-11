@@ -3,7 +3,7 @@
 array_sum,  - DONE
 in_array,  - DONE
 array_diff, - DONE 
-sort.*/
+sort. - DONE*/
 class ArrayFuncs
 {
 	public $arr;
@@ -23,19 +23,17 @@ class ArrayFuncs
 
 	public function myArraySum ()
 	{
-		$i = 0;
 		$sum = 0;
 		$count = $this->myCount($this->arr);
-		while ($i < $count) {
+		for ($i=0; $i < $count ; $i++)
+		{
 			$sum+= $this->arr[$i];
-			$i++;
 		}
 		return $sum;
 	}
 
 	public function myInArray ($a, $arr1)
 	{
-		$i = 0;
 		$j = 0;
 		$count = $this->myCount($arr1);
 		for ($i=0; $i < $count; $i++) 
@@ -83,32 +81,18 @@ class ArrayFuncs
 	public function mySort()
 	{
 		$count = $this->myCount($this->arr);
-		$transit;
-		$j = 1; // counter for sorted elements
-		while ($j != $count) 
+		for ($j=0; $j < $count ; $j++)
 		{
-			for ($i=0; $i < $count; $i++)
+			for ($i=0; $i < $count - 1; $i++)
 			{
-				if ($i == $count - 1)  // checks if it is the last element in array
-				{
-					$j++;
-					break 1;
-				}
 				if ($this->arr[$i] > $this->arr[$i+1])  // swaps array elements if needed
 				{
 					$transit = $this->arr[$i];
 					$this->arr[$i] = $this->arr[$i+1];
 					$this->arr[$i+1] = $transit;
 				}
-				else // counts already sorted elements
-				{
-					$j++;
-				}
 			}
-			if ($j != $count) 
-			{
-				$j=0;
-			}
+			$count--;
 		}
 		return $this->arr;
 	}
@@ -116,7 +100,7 @@ class ArrayFuncs
 
 
 
-$c = [4,3,2,6, 10,4, 12,5,1];
+$c = [4,3,1, 16,7,12,3,6,3];
 $e = [1,3,3,13,5,4,3,4,3];
 $obj = new ArrayFuncs($c);
 echo $obj->myArraySum();
