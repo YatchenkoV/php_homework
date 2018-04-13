@@ -8,9 +8,15 @@
         4) В массиве заменить все элементы, большие данного числа Z, этим числом. Подсчитать количество замен. - DONE
 
 
-3.php. Написать свою реализацию следующих функций php: 5) array_sum   - DONE
+3.php: Написать свою реализацию следующих функций php: 5) array_sum   - DONE
                                                        6) in_array    - DONE
                                                        7) array_diff  - DONE *ISSUE
                                                        8) sort.       - DONE
+
+
+4.php: Написать свою реализацию следующих функций php: 9) strpos         -DONE
+                                                       10) substr        -DONE
+                                                       11) substr_count  -DONE
+                                                       12) explode
 
 
